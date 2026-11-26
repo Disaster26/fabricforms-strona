@@ -320,6 +320,17 @@ body.menu-o .menu-b span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .mbar a+a{background:linear-gradient(135deg,#F1DD80,#A57D24);color:#0E0F11}
 @media (max-width:1080px){.mbar{display:grid}body{padding-bottom:54px}}
 @media (max-width:820px){.soc>.fb{order:2}.fb:not(:has(iframe)){min-height:200px}}
+
+/* baner cookies: wysokosc w --cb, pierwszy ekran nad banerem */
+.cb-k{display:none}
+.hero .wrap{padding-bottom:calc(clamp(40px,7vh,84px) + var(--cb,0px))}
+@media (max-width:560px){
+ .cookies{padding:8px 10px;gap:6px}
+ .cookies .cb-d{display:none}.cookies .cb-k{display:inline}
+ .cookies p{font-size:12.5px;line-height:1.35}
+ .cookies .cb button{min-height:40px;font-size:12px}
+ .cb-on .hero .wrap{padding-top:calc(80px)}
+}
 </style>
 
 </head>
@@ -354,7 +365,7 @@ body.menu-o .menu-b span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 </footer>
 <nav class="mbar" aria-label="Szybki kontakt"><a href="tel:+48501338623">Zadzwoń</a><a href="/fabricforms-strona/kontakt/">Napisz</a></nav>
 <div class="cookies" id="cookies" role="dialog" aria-label="Zgoda na pliki cookies" hidden>
-<p>Cookies niezbędne zapisujemy zawsze. Mapę Google i moduł Facebooka (własne cookies tych usług) wczytamy tylko za Twoją zgodą. <a href="/fabricforms-strona/polityka-prywatnosci/#pliki-cookies">Polityka prywatności</a>.</p>
+<p><span class="cb-d">Cookies niezbędne zapisujemy zawsze. Mapę Google i moduł Facebooka (własne cookies tych usług) wczytamy tylko za Twoją zgodą. </span><span class="cb-k">Mapa Google i Facebook tylko za zgodą. </span><a href="/fabricforms-strona/polityka-prywatnosci/#pliki-cookies">Polityka prywatności</a>.</p>
 <fieldset class="ust" hidden><legend class="skip">Kategorie</legend><label><input type="checkbox" checked disabled> Niezbędne (zapis wyboru)</label><label><input type="checkbox" id="zg-zew"> Treści zewnętrzne: mapa Google, Facebook</label></fieldset>
 <div class="cb"><button class="tak" type="button" data-c="tak">Akceptuję wszystkie</button><button type="button" data-c="nie">Tylko niezbędne</button><button type="button" data-c="ust">Ustawienia</button><button type="button" data-c="zap" hidden>Zapisz wybór</button></div>
 </div>
